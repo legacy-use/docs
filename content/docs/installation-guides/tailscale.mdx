@@ -1,0 +1,40 @@
+---
+title: Installing Tailscale
+description: Step-by-step guide to install and configure Tailscale on your target system.
+---
+
+## Step 1: Download Tailscale
+
+Download Tailscale from the official website:
+[https://tailscale.com/download](https://tailscale.com/download)
+
+## Step 2: Installation Setup
+
+1. Run the downloaded installer
+2. Go through the installation setup wizard
+3. Follow the on-screen prompts to complete the installation
+
+## Step 3: Verify Installation
+
+Make sure Tailscale is running after installation. You should see the Tailscale icon in your system tray.
+
+## Step 4: Configure Tailscale
+
+1. Open **Windows PowerShell** as an administrator
+2. Enter and execute the following command:
+
+```powershell
+tailscale up --auth-key=<INSERT KEY>
+```
+
+Replace `<INSERT KEY>` with your actual Tailscale auth key.
+
+## Verification
+
+After running the command, Tailscale should be connected and ready to use. You can verify the connection by checking the Tailscale admin console or running:
+
+```powershell
+tailscale status
+```
+
+Your Tailscale installation is now complete!
