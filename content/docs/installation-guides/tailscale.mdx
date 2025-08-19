@@ -23,14 +23,13 @@ Make sure Tailscale is running after installation. You should see the Tailscale 
 ## Step 4: Configure Tailscale
 
 1. Open **Windows PowerShell** as an administrator
-  ![Tailscale open Windows PowerShell](/docs/tailscale-powershell.png)
+    ![Tailscale open Windows PowerShell](/docs/tailscale-powershell.png)
 2. Enter and execute the following command:
+    ```powershell
+    tailscale up --auth-key=<INSERT KEY>
+    ```
 
-```powershell
-tailscale up --auth-key=<INSERT KEY>
-```
-
-Replace `<INSERT KEY>` with your actual Tailscale auth key.
+    Replace `<INSERT KEY>` with your actual Tailscale auth key.
 
 ## Step 5: Verification
 
