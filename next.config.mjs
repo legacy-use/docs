@@ -12,7 +12,7 @@ const config = {
 };
 
 if (process.env.GITHUB_PAGES === 'true') {
-  config.basePath = '/legacy-use-docs';
+  config.basePath = '/docs';
 }
 
 export default withMDX(config);
