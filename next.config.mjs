@@ -8,4 +8,8 @@ const config = {
   output: 'export',
 };
 
+if (process.env.GITHUB_PAGES === 'true') {
+  config.basePath = '/legacy-use-docs';
+}
+
 export default withMDX(config);
