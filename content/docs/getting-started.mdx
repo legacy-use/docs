@@ -2,3 +2,104 @@
 title: Getting started
 description: Automate work in desktop applications and expose modern APIs.
 ---
+
+Transform any legacy application into a modern API in minutes - no technical setup required.
+
+## Step 1: Create Your Account
+
+1. Visit [cloud.legacy-use.com/auth/signup](https://cloud.legacy-use.com/auth/signup)
+2. Sign up with your email address
+3. Verify your email (check your inbox)
+4. Receive $5 worth of credits for free
+
+## Step 2: Setup Your Target Machine
+
+<Callout>
+**What is a Target?** A target is any computer or application you want to automate.
+</Callout>
+
+legacy-use connects to your target like a humand coworker via:
+
+- VNC (most common) - for any desktop application
+- RDP - for Windows Remote Desktop
+- Remote Desktop Software - for TeamViewer or RustDesk
+
+## Step 3: Your First Automation
+
+Let's Automate the Windows Calculator
+We'll create a simple workflow that adds two numbers using the Windows Calculator - a perfect first automation!
+
+### Create New Workflow
+
+Navigate to API/Workflows → Create New
+Choose Template: "Windows Calculator" (or start from scratch)
+Name your workflow: "Add Two Numbers"
+Select your target: Choose the Windows computer you connected
+
+### Define Your Workflow
+
+Workflow Details
+```
+Name: Add Two Numbers
+Description: Uses Windows Calculator to add two numbers and return the result
+```
+
+Input Parameters
+```
+first_number (integer): First number to add (default: 10)
+second_number (integer): Second number to add (default: 5)
+```
+
+Instructions for AI
+```
+I need to add {{first_number}} and {{second_number}} using the Windows Calculator.
+
+Steps:
+1. Look for the Calculator app on screen - it should be visible
+2. If not visible, press Windows key and type "calculator" then press Enter
+3. Wait for Calculator to open
+4. Click the "C" button to clear any previous calculations
+5. Type the first number: {{first_number}}
+6. Click the "+" button
+7. Type the second number: {{second_number}}
+8. Click the "=" button
+9. Read the result from the display and return it
+```
+
+Expected Output
+```json
+{
+  "result": 15,
+  "calculation": "10 + 5 = 15"
+}
+```
+
+### Test Your Workflow
+
+Click "Test Workflow"
+Set test values:
+
+first_number: 12
+second_number: 8
+
+Watch the magic happen:
+
+You'll see a live video feed of your target
+Watch as the AI opens Calculator
+See it perform the calculation
+Get the structured result back
+
+## 🎉 Congratulations!
+
+You've just created and executed your first legacy-use workflow!
+
+What you accomplished:
+- ✅ Connected a target machine
+- ✅ Created an AI-powered workflow
+- ✅ Tested the automation
+- ✅ Got a working API endpoint
+
+Next steps
+- Build more complex workflows
+- Automate your business applications
+- Integrate with your existing systems
